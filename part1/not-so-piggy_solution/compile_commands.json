@@ -1,0 +1,16 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-O3",
+      "-o",
+      "sim86",
+      "./src/all.c"
+    ],
+    "directory": "/Users/fede/Courses/Performance_Aware_Programming/part1/not-so-piggy_solution",
+    "file": "/Users/fede/Courses/Performance_Aware_Programming/part1/not-so-piggy_solution/src/all.c",
+    "output": "/Users/fede/Courses/Performance_Aware_Programming/part1/not-so-piggy_solution/sim86"
+  }
+]
