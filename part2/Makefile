@@ -1,5 +1,5 @@
 PROGRAM_FILE="./src/all.c"
-PROGRAM_NAME="HaversineRelease"
+PROGRAM_NAME="haversine_release"
 
 build: 
 	gcc -Wall -O3 -o $(PROGRAM_NAME) $(PROGRAM_FILE)

@@ -1,6 +1,7 @@
 #pragma once
 
 typedef double f64;
+typedef uint64_t u64;
 typedef unsigned int u32;
 
 typedef enum { false, true } bool;

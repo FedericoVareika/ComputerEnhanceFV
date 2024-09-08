@@ -1,8 +1,5 @@
 #pragma once
 
-typedef double f64;
-typedef long i64;
-
 typedef enum {
     NullVal,
     StrVal,
@@ -46,3 +43,12 @@ struct ArrCamp {
     Value *camp_value;
     ArrCamp *next;
 };
+
+/* typedef struct JsonElement { */
+/*     char *key; */
+/*     ValueType value_type; */
+/*     ValueData value; */
+
+/*     JsonElement *first_son; */
+/*     JsonElement *next_sibling; */
+/* } JsonElement; */

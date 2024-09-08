@@ -44,7 +44,7 @@ static void print_value_node(Value *value, int depth) {
         printf("%ld", value->data.i64);
         break;
     case F64Val:
-        printf("%f", value->data.f64);
+        printf("%.17f", value->data.f64);
         break;
     case ObjVal: 
         printf("\n%*s", depth + 1, "");

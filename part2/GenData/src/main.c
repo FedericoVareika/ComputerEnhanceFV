@@ -60,11 +60,17 @@ int main(int argc, char **argv) {
                 return 1;
             }
 
-            u32 seed = (u32)atoi(argv[2]);
-            u32 n_pairs = (u32)atoi(argv[3]);
+            u64 seed = atoll(argv[2]);
+            u64 n_pairs = atoll(argv[3]);
+            u64 max_pairs = 1 << 24; 
+
+            if (n_pairs > max_pairs) {
+                fprintf(stderr, "ERROR: Exceded pair count\n");
+                return 1;
+            }
 
             char flex_out_name[50];
-            sprintf(flex_out_name, "data_%i_flex.json", n_pairs);
+            sprintf(flex_out_name, "data_%llu_flex.json", n_pairs);
             FILE *flex_out = fopen(flex_out_name, "w");
             if (!flex_out) {
                 printf("Error opening flex out file: %s\n", flex_out_name);
@@ -72,7 +78,7 @@ int main(int argc, char **argv) {
             }
 
             char ans_out_name[50];
-            sprintf(ans_out_name, "data_%i_answer.f64", n_pairs);
+            sprintf(ans_out_name, "data_%llu_answer.f64", n_pairs);
             FILE *ans_out = fopen(ans_out_name, "w");
             if (!flex_out) {
                 printf("Error opening ans out file: %s\n", ans_out_name);

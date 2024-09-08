@@ -1,7 +1,5 @@
 #include "all.c"
 
-typedef enum { false, true } bool;
-
 Value *make_parse_tree() {
     Value *tree = malloc(sizeof(*tree));
     {
@@ -105,12 +103,8 @@ int main(int argc, char **argv) {
     }
 
     if (test_parser) {
-        FILE *json_in = fopen(test_json_filename, "r");
-        if (!json_in) {
-            fprintf(stderr, "Error opening %s\n", test_json_filename);
-            return 1;
-        }
-        Value *main_obj = parse_json(json_in);
+        Buffer json_buffer = read_entire_file(test_json_filename);
+        Value *main_obj = parse_json(&json_buffer);
         print_parse_tree(main_obj);
     }
 
