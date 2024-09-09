@@ -9,7 +9,7 @@ typedef double f64;
 typedef long i64;
 typedef char u8;
 typedef unsigned int u32;
-typedef unsigned long u64;
+typedef uint64_t u64;
 
 #include "buffer.h"
 #include "structures.h"

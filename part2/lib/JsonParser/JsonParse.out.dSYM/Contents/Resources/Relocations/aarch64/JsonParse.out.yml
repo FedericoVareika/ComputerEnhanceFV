@@ -1,0 +1,25 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     JsonParse.out
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _free_buffer, symObjAddr: 0x0, symBinAddr: 0x1000022C4, symSize: 0x48 }
+  - { offsetInCU: 0x1AF, offset: 0x1AF, size: 0x8, addend: 0x0, symName: _free_buffer, symObjAddr: 0x0, symBinAddr: 0x1000022C4, symSize: 0x48 }
+  - { offsetInCU: 0x1D3, offset: 0x1D3, size: 0x8, addend: 0x0, symName: _read_entire_file, symObjAddr: 0x48, symBinAddr: 0x10000230C, symSize: 0x118 }
+  - { offsetInCU: 0x233, offset: 0x233, size: 0x8, addend: 0x0, symName: _allocateBuffer, symObjAddr: 0x160, symBinAddr: 0x100002424, symSize: 0x88 }
+  - { offsetInCU: 0x269, offset: 0x269, size: 0x8, addend: 0x0, symName: _parse_json, symObjAddr: 0x1E8, symBinAddr: 0x1000024AC, symSize: 0x6C }
+  - { offsetInCU: 0x2AE, offset: 0x2AE, size: 0x8, addend: 0x0, symName: _set_json_element, symObjAddr: 0x254, symBinAddr: 0x100002518, symSize: 0xF8 }
+  - { offsetInCU: 0x2EE, offset: 0x2EE, size: 0x8, addend: 0x0, symName: _remove_whitespace, symObjAddr: 0x36C, symBinAddr: 0x100002630, symSize: 0x114 }
+  - { offsetInCU: 0x32E, offset: 0x32E, size: 0x8, addend: 0x0, symName: _get_value_type, symObjAddr: 0x480, symBinAddr: 0x100002744, symSize: 0x20C }
+  - { offsetInCU: 0x380, offset: 0x380, size: 0x8, addend: 0x0, symName: _parse_string, symObjAddr: 0x68C, symBinAddr: 0x100002950, symSize: 0x22C }
+  - { offsetInCU: 0x3EF, offset: 0x3EF, size: 0x8, addend: 0x0, symName: _parse_buffer, symObjAddr: 0x8B8, symBinAddr: 0x100002B7C, symSize: 0x238 }
+  - { offsetInCU: 0x46D, offset: 0x46D, size: 0x8, addend: 0x0, symName: _parse_f64_sign, symObjAddr: 0xAF0, symBinAddr: 0x100002DB4, symSize: 0x74 }
+  - { offsetInCU: 0x4B1, offset: 0x4B1, size: 0x8, addend: 0x0, symName: _parse_f64_num, symObjAddr: 0xB64, symBinAddr: 0x100002E28, symSize: 0xE0 }
+  - { offsetInCU: 0x51F, offset: 0x51F, size: 0x8, addend: 0x0, symName: _parse_f64_, symObjAddr: 0xC44, symBinAddr: 0x100002F08, symSize: 0x140 }
+  - { offsetInCU: 0x5A9, offset: 0x5A9, size: 0x8, addend: 0x0, symName: _parse_f64, symObjAddr: 0xD84, symBinAddr: 0x100003048, symSize: 0x28C }
+  - { offsetInCU: 0x618, offset: 0x618, size: 0x8, addend: 0x0, symName: _parse_i64, symObjAddr: 0x1010, symBinAddr: 0x1000032D4, symSize: 0x274 }
+  - { offsetInCU: 0x687, offset: 0x687, size: 0x8, addend: 0x0, symName: _print_json_list, symObjAddr: 0x1284, symBinAddr: 0x100003548, symSize: 0x88 }
+  - { offsetInCU: 0x6B9, offset: 0x6B9, size: 0x8, addend: 0x0, symName: _print_json_elem, symObjAddr: 0x130C, symBinAddr: 0x1000035D0, symSize: 0x274 }
+  - { offsetInCU: 0x6EB, offset: 0x6EB, size: 0x8, addend: 0x0, symName: _print_parse_tree, symObjAddr: 0x15A0, symBinAddr: 0x100003864, symSize: 0x28 }
+  - { offsetInCU: 0x70F, offset: 0x70F, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x15C8, symBinAddr: 0x10000388C, symSize: 0x164 }
+  - { offsetInCU: 0x799, offset: 0x799, size: 0x8, addend: 0x0, symName: _set_json_list, symObjAddr: 0x172C, symBinAddr: 0x1000039F0, symSize: 0x2AC }
+...

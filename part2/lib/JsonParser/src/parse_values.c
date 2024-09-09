@@ -65,6 +65,33 @@ char *parse_string(Parser *parser) {
     return str;
 }
 
+Buffer parse_buffer(Parser *parser) {
+    Buffer result = {};
+
+    u64 offset = 0;
+    char c = parserAtOffset(parser, offset++);
+    assert(c == '\"');
+
+    int i = 0;
+    char char_arr[char_arr_len] = "";
+    do {
+        c = parserAtOffset(parser, offset++);
+        char_arr[i++] = c;
+    } while (c != '\"' && i < char_arr_len);
+    assert(i < char_arr_len);
+    char_arr[i - 1] = 0;
+
+    incParser(parser, offset);
+
+    char *str = malloc(sizeof(char) * i);
+    memcpy(str, &char_arr[0], i);
+
+    result.data = str;
+    result.count = i;
+
+    return result;
+}
+
 f64 parse_f64_sign(Parser *parser) {
     u64 offset = 0;
     char c = parserAtOffset(parser, offset++);
