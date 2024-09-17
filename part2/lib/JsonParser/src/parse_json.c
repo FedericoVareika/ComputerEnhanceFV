@@ -1,5 +1,3 @@
-#include "parse_json.h"
-
 #define panic(...)                                                             \
     {                                                                          \
         fprintf(stderr, __VA_ARGS__);                                          \
@@ -49,6 +47,8 @@ static void set_json_list(JsonElement *elem, Parser *parser) {
 }
 
 static void set_json_element(JsonElement *elem, Buffer key, Parser *parser) {
+    /* timeFunction; */
+
     elem->key = key;
     remove_whitespace(parser);
     elem->value_type = get_value_type(parser);
@@ -78,6 +78,8 @@ static void set_json_element(JsonElement *elem, Buffer key, Parser *parser) {
 }
 
 JsonElement parse_json(Buffer *buf) {
+    timeFunction; 
+
     Parser parser = {};
     parser.buf = buf;
     parser.at = 0;
@@ -87,6 +89,8 @@ JsonElement parse_json(Buffer *buf) {
 }
 
 JsonElement *lookup_json_element(JsonElement *json, Buffer buf) {
+    /* timeFunction; */
+
     JsonElement *result = json->first_son;
     while (result) {
         if (strncmp(result->key.data, buf.data, buf.count) == 0) break;
@@ -108,5 +112,6 @@ void free_json_element(JsonElement *elem) {
 }
 
 void free_json(JsonElement main_object) {
+    timeFunction;
     free_json_element(main_object.first_son);
 }

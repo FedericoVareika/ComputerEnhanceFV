@@ -1,5 +1,3 @@
-#include "parse_values.h"
-
 #define is_empty_char(a)                                                       \
     (a == ' ' || a == '\t' || a == '\n' || a == '\v' || a == '\f' || a == '\r')
 
@@ -15,7 +13,6 @@ void remove_whitespace(Parser *parser) {
 
 ValueType get_value_type(Parser *parser) {
     ValueType type = NullVal;
-
 
     remove_whitespace(parser);
 

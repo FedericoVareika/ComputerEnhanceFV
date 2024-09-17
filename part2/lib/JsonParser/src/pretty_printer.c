@@ -1,5 +1,3 @@
-#include "pretty_printer.h"
-
 /* static void print_obj_camp(ObjCamp *camp, int depth); */
 /* static void print_arr_camp(ArrCamp *camp, int depth); */
 /* static void print_value_node(Value *value, int depth); */

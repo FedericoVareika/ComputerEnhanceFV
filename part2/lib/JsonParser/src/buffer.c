@@ -1,4 +1,18 @@
-#include "buffer.h"
+typedef struct {
+    size_t count;
+    u8 *data;
+} Buffer;
+
+typedef struct {
+    Buffer *buf;
+    u64 at;
+} Parser;
+
+#define stringLiteral(string) ((Buffer){sizeof((string)) - 1, (u8 *)(string)})
+
+#define parserAt(parser) (parser->buf->data[parser->at])
+#define parserAtOffset(parser, offset) (parser->buf->data[parser->at + offset])
+#define incParser(parser, offset) (parser->at += offset)
 
 static Buffer allocateBuffer(size_t count) {
     Buffer result = {};
@@ -15,7 +29,6 @@ static Buffer allocateBuffer(size_t count) {
 void free_buffer(Buffer *buffer) {
     if (buffer->data)
         free(buffer->data);
-    buffer = NULL;
 }
 
 Buffer read_entire_file(char *filename) {
@@ -33,6 +46,7 @@ Buffer read_entire_file(char *filename) {
 
         result = allocateBuffer(stat_.st_size);
         if (result.data) {
+            timeBandwidth("fread", result.count);
             if (fread(result.data, result.count, 1, in) != 1) {
                 fprintf(stderr, "Error: Unable to read \"%s\".\n", filename);
                 free_buffer(&result);

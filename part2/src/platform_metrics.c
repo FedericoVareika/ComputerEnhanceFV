@@ -38,5 +38,3 @@ u64 get_cpu_freq(u64 miliseconds_to_wait) {
 
     return cpu_freq;
 }
-
-
